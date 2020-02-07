@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Home (WeatherPy - HY)</title>
+  <title>Humidity vs Latitude (WeatherPy - HY)</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -27,18 +27,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
 
         <!-- * Contains a dropdown on the right of the navbar named "Plots" which provides links to each individual visualization page. -->
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown active">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Plots
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="plot_latvstemp.html">Temperature vs Latitude</a>
-            <a class="dropdown-item" href="plot_latvshumidity.html">Humidity vs. Latitude</a>
+            <a class="dropdown-item active" href="plot_latvshumidity.html">Humidity vs. Latitude</a>
             <a class="dropdown-item" href="plot_latvscloud.html">Cloudiness vs. Latitude</a>
             <a class="dropdown-item" href="plot_latvswindspeed.html">Wind Speed vs. Latitude</a>
           </div>
@@ -55,31 +55,35 @@
     </div>
   </nav>
 
-  <!-- * An explanation of the project.-->
-  <div class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">WeatherPy</h1>
-      <p class="lead">See how weather around the world changes as it nears the equater. </p>
-      <hr class="my-4">
-      <p>
-      <i>By Heain Yee (Feb 2020) </i> <br> <br>
-      Dataset of <b>500+ observations </b> (random selction)  was assembled using the OpenWeatherMap API. <br>
-      This website provides the findings of this project, which includes the relationship between latitude and:
-      <ul>
-        <li>temperature (F)</li>
-        <li>humidity (%) </li>
-        <li>cloudiness (%)</li>
-        <li>wind speed (mph)</li>
-      </ul> 
-      The visualizations were created using Matplotlib.<br>      
-      <a class="btn btn-primary btn-lg" href="data.html" role="button">See the Data</a>  
-      <a class="btn btn-secondary btn-lg" href="comparisons.html" role="button">See The Comparison</a>
+  <!-- Observation and Visual -->
+  <div class = "mt-3 container">
+    <div class="row">
+      <div class="col">
+          <h1>Humidity vs. Latitude</h1>
+      </div>
     </div>
-    
-  </div>
 
-  <!-- * Links to each visualizations page. -->
-  <div class="container">
+    <div class = "row h-100">
+
+      <div class = "col-md-6 my-auto">
+        <h4>Observations</h4>
+          <ul> 
+            <li>Sample cities near the equator are likely to have higher humidity (between 60 and 100%). </li>
+            <li>Also note that sample cities between 40 and 80 latitude tend to have high humidity (between 70% and 100%). </li>
+          </ul>
+          <a class="btn btn-light" href="data.html" role="button">See the Data</a>  
+          <a class="btn btn-light" href="comparisons.html" role="button">See The Comparison</a>
+        </div>
+
+      <div class = "mt-3 col-md-6">
+        <img src="Resources\assets\images\Humidity_Lat.png" alt="Scatterplot: Humidity and Latitude" class="img-thumbnail">
+      </div>
+    </div>
+      
+    </div>
+
+  <!-- Bottom Navigation -->
+  <div class="mt-5 container">
     <h3 class="text-center">Visualizations (vs. Latitude)</h3>
       <div class="row">
           <div class="col-md-3 col-sm-6">
@@ -133,7 +137,7 @@
               </div>
               <div class="thumbnail">
                 <a href="plot_latvswindspeed.html">
-                <img src="Resources\assets\images\WindSpeed_Lat.png" alt="Scatterplot: Wind Speed and Latitude" class="img-thumbnail">
+                <img src="Resources\assets\images\WindSpeed_Lat.png" alt="Scatterplot: Wind speed and Latitude" class="img-thumbnail">
                 </a>
               </div>
               <div class="caption">

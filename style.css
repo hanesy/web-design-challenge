@@ -16,6 +16,10 @@ body {
   background: #F2F2F2;
 }
 
+.table {
+  font-size: 90%;
+}
+
 /* Transform! */
 @media (max-width: 990px) {
   /* Dark */
@@ -35,7 +39,7 @@ body {
   /* Light */
   .table {
     color:#A0C3D9;
-    font-size: 75%;
+    font-size: 85%;
   }
 
   body {
